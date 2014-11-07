@@ -7,7 +7,7 @@ typedef   struct
 	int last;
 }SeqList,* L;
 
-//ÏßĞÔ±í³õÊ¼»¯ 
+//çº¿æ€§è¡¨åˆå§‹åŒ– 
 SeqList* init_SeqList()
 {
 	SeqList* L;
@@ -16,18 +16,18 @@ SeqList* init_SeqList()
 	return L;
 }
 
-//²åÈëÄ³¸öÔªËØµ½ÏßĞÔ±íÖĞµÄÄ³¸öÎ»ÖÃ 
+//æ’å…¥æŸä¸ªå…ƒç´ åˆ°çº¿æ€§è¡¨ä¸­çš„æŸä¸ªä½ç½® 
 int Insert_SeqList(SeqList* L,int i,int x)
 {
 	int j;
 	if(L->last == 19)
 	{
-		printf("±íÂú");
+		printf("è¡¨æ»¡");
 		return -1;
 	}
 	if(i<1 || i>L->last+2)
 	{
-		printf("²åÈëÎ»ÖÃ³ö´í");
+		printf("æ’å…¥ä½ç½®å‡ºé”™");
 		return 0;
 	}
 
@@ -39,13 +39,13 @@ int Insert_SeqList(SeqList* L,int i,int x)
 		return 1;
 }
 
-//É¾³ıÏßĞÔ±íÖĞÄ³¸öÎ»ÖÃµÄÔªËØ 
+//åˆ é™¤çº¿æ€§è¡¨ä¸­æŸä¸ªä½ç½®çš„å…ƒç´  
 int Delete_SeqList(SeqList* L,int i)
 {
 	int j;
 	if(i<1||i>L->last+1)
 	{
-		printf("²»´æÔÚµÚi¸öÔªËØ");
+		printf("ä¸å­˜åœ¨ç¬¬iä¸ªå…ƒç´ ");
 		return 0; 
 	}
 	for(j=i;j<=L->last;j++)
@@ -54,7 +54,7 @@ int Delete_SeqList(SeqList* L,int i)
 	return 1;
 }
 
-//²éÕÒÄ³Ò»¸öÖµµÄÔªËØÔÚÏßĞÔ±íµÄÄÄ¸öÎ»ÖÃ 
+//æŸ¥æ‰¾æŸä¸€ä¸ªå€¼çš„å…ƒç´ åœ¨çº¿æ€§è¡¨çš„å“ªä¸ªä½ç½® 
 
 int Location_SeqList(SeqList* L,int x)
 {
